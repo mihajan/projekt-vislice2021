@@ -3,4 +3,4 @@
 
 V programu python bomo napisali igrico vislice
 
-Miha Jan 
+Avtor: Miha Jan 
