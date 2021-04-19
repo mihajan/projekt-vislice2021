@@ -1,20 +1,6 @@
-# projekt-vislice2021
-Projekt, ki ga delamo pri vajah UVP 2021.
+# Projekt vislice 2021
+## projekt na vajah pri projektu UVP
 
-##Podnaslov
+V programu python bomo napisali igrico vislice
 
-- naštevam
-- več stvari
- - podseznami
- 1. oš
- 2. tevilčeno
-
-**krepko**  ***krepko pudarejno***
-[link] (https:google.com)
-
-Ključni del programa je:
-'''python 
-class Vislice:
-
-
-Miha Jan
+Miha Jan 
