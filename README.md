@@ -4,4 +4,4 @@
 V programu python bomo napisali igrico vislice
 Tukaj bo vsa potrebna koda. 
 
-Miha Jan 
+Avtor: Miha Jan 
