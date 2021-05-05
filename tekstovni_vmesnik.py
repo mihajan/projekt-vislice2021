@@ -24,7 +24,7 @@ def izpis_zmage(igra):
     )
 
 def pozeni_vmesnik():
-    igra = model.nova_igra(model.bazen_besed)
+    igra = model.nova_igra()
     while True:
         if igra.zmaga():
             print(izpis_zmage(igra))

@@ -1,7 +1,7 @@
 import random
 
 #NAJPREJ KONSTANTE
-STEVILO_DOVOLJENIH_NAPAK = 10
+STEVILO_DOVOLJENIH_NAPAK = 9
 
 PRAVILNA_CRKA = '+'
 PONOVLJENA_CRKA = 'o'
@@ -51,7 +51,15 @@ class Igra:
         return self.stevilo_napak() > STEVILO_DOVOLJENIH_NAPAK
 
     def zmaga(self):
-        return all([i in self.crke for i in self.geslo])
+        vse_crke = True
+        for crka in self.geslo:
+            if crka in self.pravilne_crke():
+                pass
+            else:
+                vse_crke = False
+                break
+        # vse_crke1 = all(crka in self.crke for crka in self.geslo)
+        return vse_crke and STEVILO_DOVOLJENIH_NAPAK >= self.stevilo_napak()
 
     def pravilni_del_gesla(self):
         rezultat = ""
@@ -59,7 +67,7 @@ class Igra:
             if c in self.crke:
                 rezultat += c
             else:
-                rezultat += "_"
+                rezultat += "_ "
         return rezultat
 
     def nepravilni_ugibi(self):
@@ -88,7 +96,7 @@ bazen_besed = []
 with open('besede.txt', encoding='utf-8') as input_file:
     bazen_besed = input_file.readlines()
 
-def nova_igra(bazen_besed):
+def nova_igra():
     beseda = random.choice(bazen_besed).strip()
     return Igra(beseda, "")
 
