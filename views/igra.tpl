@@ -1,9 +1,6 @@
 % import model
+%rebase("base.tpl")
 
-<!DOCTYPE html>
-<html>
-
-<body>
 
   <h1>Vislice</h1>
 
@@ -37,8 +34,3 @@
     <button type="submit">Ugibaj</button>
     </form>
 % end
-
-
-</body>
-
-</html>
