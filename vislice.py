@@ -9,7 +9,12 @@ def index():
 
 @bottle.post('/igra/')
 def nova_igra():
+    vislice = model.Vislice.preberi_iz_datoteke(model.DATTOEKA_ZA_SHRANJEVANJE)
+
     id_igre = vislice.nova_igra()
+
+    vislice.zapisi_v_datoteko(model.DATTOEKA_ZA_SHRANJEVANJE)
+
     bottle.redirect('/igra/{}/'.format(id_igre)) #preusmeri na drug naslov da ne kompiramo kode
 
 @bottle.get('/igra/<id_igre:int>/')
